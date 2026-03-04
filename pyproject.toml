@@ -1,0 +1,9 @@
+[project]
+name = "backend-api"
+version = "0.1.0"
+description = "Learing the ropes of FastAPI Backend API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.135.1",
+]
