@@ -1,0 +1,4 @@
+ - [*] Crud Ops till 2:21:34 https://www.youtube.com/watch?v=0sOvCWFmrtA
+ - [*] DBMS till 5:32:21
+ - [*] Till 8:32
+ - [ ] 10:08 onwards - Query paremeters and Pagination
