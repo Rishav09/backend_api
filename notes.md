@@ -352,3 +352,10 @@ In real large systems:
 * prefer **cursor pagination**
 
 
+
+
+## Storing .env(printed using printenv on remote linux system)-
+### Write the below command in the .profile file of the shell
+```set -o allexport; source /home/rishav/.env; set +o allexport```
+## ssh -i fastAPI-backend.pem rishav@ec2-54-167-28-22.compute-1.amazonaws.com
+## use ubuntu
