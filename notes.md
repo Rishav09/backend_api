@@ -359,3 +359,5 @@ In real large systems:
 ```set -o allexport; source /home/rishav/.env; set +o allexport```
 ## ssh -i fastAPI-backend.pem rishav@ec2-54-167-28-22.compute-1.amazonaws.com
 ## use ubuntu
+
+## To connect to postgres from local, to connect the llocal host, you need to add security group inbound on aws
