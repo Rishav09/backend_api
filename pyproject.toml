@@ -13,4 +13,5 @@ dependencies = [
     "psycopg[binary]>=3.3.3",
     "python-jose[cryptography]>=3.5.0",
     "sqlalchemy>=2.0.48",
+    "uvicorn-worker>=0.4.0",
 ]

@@ -7,6 +7,7 @@ User=rishav
 Group=rishav
 WorkingDirectory=/home/rishav/app/src
 Environment="PATH=/home/rishav/app/src/.venv/bin"
+EnvironmentFile = /home/rishav/.env
 ExecStart=/home/rishav/app/src/.venv/bin/gunicorn -w 2 -k uvicorn_worker.UvicornWorker app.main:app --bind 0.0.0.0:8000
 Restart=always
 RestartSec=5
