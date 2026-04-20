@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+    #env_file:
+    #  - fileName
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/.venv
+    command: [ ".venv/bin/uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000" ]
+    environment:
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_PASSWORD=admin
+      - DATABASE_NAME=backendapi
+      - DATABASE_USERNAME=postgres
+      - SECRET_KEY=c3f03d223c0570a48238a46d06e7f9119cf9b1393547d2129e5ad23124d5c078
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=backendapi
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:

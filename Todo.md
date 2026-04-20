@@ -2,3 +2,4 @@
  - [*] DBMS till 5:32:21
  - [*] Till 8:32
  - [ ] 10:08 onwards - Query paremeters and Pagination
+ - [ ] Instead of heroku, we'll do aws

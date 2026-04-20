@@ -19,7 +19,7 @@ class User(Base):
     password = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=func.now())
     posts = relationship("Post", back_populates="owner")
-    phone_number = Column(String(15), nullable=False)
+    phone_number = Column(String(15), nullable=True)
 
     
 class Vote(Base):

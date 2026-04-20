@@ -360,4 +360,15 @@ In real large systems:
 ## ssh -i fastAPI-backend.pem rishav@ec2-54-167-28-22.compute-1.amazonaws.com
 ## use ubuntu
 
-## To connect to postgres from local, to connect the llocal host, you need to add security group inbound on aws
+## To connect to postgres from local, to connect the llocal host, you need to add security group inbound on aws to allow the port 5432, port 8000 respectively.
+
+## Use gunicorn for production environment-
+## Gunicorn is a process manager who restarts the application if it shuts down automatically.
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0
+
+## To run the application in backgroound we need to create our own service which start the apps for us.
+
+## pytest -x : Stop on first failure of test cases.
+## pytest --disable-warnings : Disable warnings.
+## pytest --disable-warnings -v /Users/rishavsapahia/backend_api/tests/test_users.py : Verbose
+## pytest --disable-warnings -s /Users/rishavsapahia/backend_api/tests/test_users.py -k "login" : To see the print output

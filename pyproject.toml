@@ -11,6 +11,7 @@ dependencies = [
     "gunicorn>=25.3.0",
     "psycopg2-binary>=2.9.11",
     "psycopg[binary]>=3.3.3",
+    "pytest>=9.0.3",
     "python-jose[cryptography]>=3.5.0",
     "sqlalchemy>=2.0.48",
     "uvicorn-worker>=0.4.0",
